@@ -19,8 +19,7 @@ It helps developers scan Docker images, inspect image filesystems, and debug run
 ## Example commands
 
 ```bash
-dockit image scan nginx:latest
-dockit image files nginx:latest
+dockit image inspect nginx:latest
 dockit container inspect my-container
 dockit container debug my-container
 ```
