@@ -2,7 +2,10 @@ module github.com/aitouakrim10/dockit
 
 go 1.26.0
 
-require github.com/docker/docker v28.5.2+incompatible
+require (
+	github.com/docker/docker v28.5.2+incompatible
+	go.yaml.in/yaml/v3 v3.0.5
+)
 
 require (
 	github.com/Microsoft/go-winio v0.6.4 // indirect

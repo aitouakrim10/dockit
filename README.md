@@ -19,10 +19,17 @@ It helps developers scan Docker images, inspect image filesystems, and debug run
 ## Example commands
 
 ```bash
-dockit image inspect nginx:latest
+dockit inspect nginx:latest
+dockit inspect nginx:latest --format text
+dockit inspect nginx:latest --format json
+dockit inspect nginx:latest --format yaml
 dockit container inspect my-container
 dockit container debug my-container
 ```
+
+Image inspection uses text output by default. Use `--format` (or `-f`) with
+`text`, `json`, or `yaml` when the output needs to be consumed by another
+tool.
 
 ## Project status
 
