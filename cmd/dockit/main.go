@@ -24,7 +24,10 @@ func main() {
 				os.Exit(1)
 			}
 		} else if os.Args[1] == "scan" && len(os.Args) == 3 {
-			fmt.Println("Scanning Docker image for vulnerabilities...", os.Args[2])
+			if err := scanImage(os.Args[2]); err != nil {
+				fmt.Fprintln(os.Stderr, "Error:", err)
+				os.Exit(1)
+			}
 		}
 	} else {
 		fmt.Println("No arguments provided. Use -h or --help for usage information.")
